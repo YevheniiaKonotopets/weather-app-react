@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-/*import "./styles.css";*/
+import "./Search.css";
 
 export default function Search() {
   let [city, setCity] = useState("");
@@ -37,13 +37,25 @@ export default function Search() {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="Enter the city ..."
-            onChange={updateCity}
-          />
-          <input type="submit" value="Search" />
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter the city ..."
+                onChange={updateCity}
+                className="search-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-light w-100 search-button"
+              />
+            </div>
+          </div>
         </form>
+        <hr />
         <ul>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
@@ -59,12 +71,23 @@ export default function Search() {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="Enter the city ..."
-            onChange={updateCity}
-          />
-          <input type="submit" value="Search" />
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter the city ..."
+                onChange={updateCity}
+                className="search-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-light w-100 search-button"
+              />
+            </div>
+          </div>
         </form>
       </div>
     );

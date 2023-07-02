@@ -15,11 +15,27 @@
 
 .weather-app-wrapper {
   padding: 20px;
-  background: #676666;
+  background: #878787;
   border-radius: 16px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   padding: 40px;
   max-width: 600px;
   min-width: 600px;
   margin: 30px auto;
+}
+
+.footnote {
+  padding-top: 20px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footnote a {
+  color: #282c34;
+  font-weight: bold;
+}
+
+hr {
+  background-color: #282c34;
 }
