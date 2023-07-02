@@ -15,6 +15,7 @@ export default function Search() {
   function displayWeather(response) {
     setLoad(true);
     setWeather({
+      city: city,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -60,7 +61,7 @@ export default function Search() {
         <div className="weather-info">
           <div class="row">
             <div class="col-6">
-              <h1>{city}</h1>
+              <h1>{weather.city}</h1>
               <ul>
                 <li>
                   <span id="currentTime">Sunday 15:44</span>, {}
