@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import "bootstrap/dist/css/bootstrap.css";
 import "./Search.css";
 
 export default function Search() {
@@ -61,7 +61,7 @@ export default function Search() {
         <div className="weather-info">
           <div class="row">
             <div class="col-6">
-              <h1>{weather.city}</h1>
+              <div className="temperature">{weather.city}</div>
               <ul>
                 <li>
                   <span id="currentTime">Sunday 15:44</span>, {}
