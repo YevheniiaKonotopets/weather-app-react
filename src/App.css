@@ -24,6 +24,17 @@
   color: white;
 }
 
+.weather-app-wrapper {
+  padding: 20px;
+  background: #676666;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  padding: 40px;
+  max-width: 600px;
+  min-width: 600px;
+  margin: 30px auto;
+}
+
 .App-link {
   color: #61dafb;
 }
