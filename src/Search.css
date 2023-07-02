@@ -25,3 +25,47 @@
   height: 50px;
   padding: 15px 0;
 }
+
+h1 {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 20px 0 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: #282c34;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin-bottom: 5 px;
+  line-height: 425pxpx;
+}
+
+.weather-info {
+  margin-top: 20px;
+  color: #282c34;
+  line-height: 20px;
+}
+
+.temperature {
+  color: #fff;
+  margin-left: 5px;
+  font-weight: 400;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 1;
+
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-top: 20px;
+}
