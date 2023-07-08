@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./formattedDate";
+import WeatherInfo from "./WeatherInfo";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Search.css";
 
@@ -60,31 +60,7 @@ export default function Search() {
         </form>
         <hr />
 
-        <div className="weather-info">
-          <div class="row">
-            <div class="col-6">
-              <div className="temperature">{weather.city}</div>
-              <ul>
-                <li>
-                  <span>
-                    <FormattedDate date={weather.date} />, {weather.description}
-                  </span>
-                </li>
-                <li>Humidity: {weather.humidity}%</li>
-                <li>Wind: {Math.round(weather.wind)}km/h</li>
-              </ul>
-            </div>
-            <div class="col-6">
-              <div className="temperature">
-                {Math.round(weather.temperature)}°C
-              </div>
-              <div>
-                {" "}
-                <img src={weather.icon} alt={weather.description} />
-              </div>
-            </div>
-          </div>
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   } else {
