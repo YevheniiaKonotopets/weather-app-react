@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Search.css";
 
@@ -40,8 +41,8 @@ export default function Search() {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <div class="row">
-            <div class="col-9">
+          <div className="row">
+            <div className="col-9">
               <input
                 type="search"
                 placeholder="Enter the city ..."
@@ -49,11 +50,11 @@ export default function Search() {
                 className="search-input"
               />
             </div>
-            <div class="col-3">
+            <div className="col-3">
               <input
                 type="submit"
                 value="Search"
-                class="btn btn-light w-100 search-button"
+                className="btn btn-light w-100 search-button"
               />
             </div>
           </div>
@@ -61,14 +62,16 @@ export default function Search() {
         <hr />
 
         <WeatherInfo data={weather} />
+        <hr />
+        <WeatherForecast data={weather} />
       </div>
     );
   } else {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <div class="row">
-            <div class="col-9">
+          <div className="row">
+            <div className="col-9">
               <input
                 type="search"
                 placeholder="Enter the city ..."
@@ -76,11 +79,11 @@ export default function Search() {
                 className="search-input"
               />
             </div>
-            <div class="col-3">
+            <div className="col-3">
               <input
                 type="submit"
                 value="Search"
-                class="btn btn-light w-100 search-button"
+                className="btn btn-light w-100 search-button"
               />
             </div>
           </div>

@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div class="weather-app-wrapper">
+        <div className="weather-app-wrapper">
           <Search />
 
           <div className="footnote">

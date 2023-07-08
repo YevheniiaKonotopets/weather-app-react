@@ -6,8 +6,8 @@ import "./WeatherInfo.css";
 export default function WeatherInfo(props) {
   return (
     <div className="weather-info">
-      <div class="row">
-        <div class="col-6">
+      <div className="row">
+        <div className="col-6">
           <div className="temperature">{props.data.city}</div>
           <ul>
             <li>
@@ -20,7 +20,7 @@ export default function WeatherInfo(props) {
             <li>Wind: {Math.round(props.data.wind)}km/h</li>
           </ul>
         </div>
-        <div class="col-6">
+        <div clasNames="col-6">
           <WeatherTemp celsius={props.data.temperature} />
           <div>
             {" "}
