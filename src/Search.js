@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./formattedDate";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Search.css";
 
@@ -15,12 +16,13 @@ export default function Search() {
   function displayWeather(response) {
     setLoad(true);
     setWeather({
-      city: city,
+      city: response.data.name,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -64,8 +66,9 @@ export default function Search() {
               <div className="temperature">{weather.city}</div>
               <ul>
                 <li>
-                  <span id="currentTime">Sunday 15:44</span>, {}
-                  <span>{weather.description}</span>
+                  <span>
+                    <FormattedDate date={weather.date} />, {weather.description}
+                  </span>
                 </li>
                 <li>Humidity: {weather.humidity}%</li>
                 <li>Wind: {Math.round(weather.wind)}km/h</li>
