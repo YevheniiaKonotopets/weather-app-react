@@ -1,7 +1,6 @@
 .weather-forcast {
   margin: 0 0 40px 0;
   text-align: center;
-  padding-top: 40px;
 }
 
 .forecast-day {
@@ -30,4 +29,12 @@
   display: block;
   margin: 20px auto;
   color: rgb(33, 33, 33);
+}
+
+.warning {
+  font-style: italic;
+  color: #282c34;
+
+  font-size: 14px;
+  text-align: center;
 }

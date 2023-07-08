@@ -18,12 +18,19 @@ export default function WeatherForecast(props) {
 
   if (loaded) {
     return (
-      <div className="row weather-forcast">
-        {forecast.map(function (dailyForecast, index) {
-          if (index < 6) {
-            return <WeatherForecastDay forecast={dailyForecast} />;
-          }
-        })}
+      <div>
+        <div className="row weather-forcast">
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 6) {
+              return <WeatherForecastDay forecast={dailyForecast} />;
+            } else {
+              return null;
+            }
+          })}
+        </div>
+        <div className="row d-flex justify-content-center warning">
+          Only available in Celsius
+        </div>
       </div>
     );
   } else {
