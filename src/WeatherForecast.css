@@ -22,6 +22,7 @@
 }
 
 .forecast-temperature-lowest {
+  font-size: 15px;
   opacity: 0.6;
 }
 
